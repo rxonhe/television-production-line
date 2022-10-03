@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Televisions</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <td>Id</td>
+        <td>Model Name</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="television : ${televisions}">
+        <td th:text="${television.getId()}"></td>
+        <td th:text="${television.getModelName()}"></td>
+    </tr>
+    </tbody>
+</table>
+<p>
+    <a th:href="@{/new/television}">New Television</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Television</title>
+</head>
+<body>
+<form method="post" th:action="@{/save/television}" th:object="${television}">
+    <label for="modelName">Name</label>
+    <input type="text" id="modelName" th:field="*{modelName}">
+    <input type="submit" value="Save Television">
+</form>
+</body>
+</html>
