@@ -2,6 +2,7 @@
 <html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link th:href="@{/styles/styles.css}" rel="stylesheet"/>
     <title>Add Television</title>
 </head>
 <body>
@@ -11,5 +12,6 @@
     <input type="submit" value="Save Television">
     <p th:if="${#fields.hasErrors('modelName')}">Nome de modelo inválido</p>
 </form>
+<a th:href="@{/televisions}">Voltar</a>
 </body>
 </html>
